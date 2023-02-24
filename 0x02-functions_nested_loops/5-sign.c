@@ -1,17 +1,14 @@
 #include "main.h"
-
 /**
- * print_sign - prints the sign of a number
- * @n: the number of the sign to be printed
- * Return: 1 if number is greater than zero
- * 0 of number is zero
- * -1 if number is less than zero
+ * print_sign - Determines whether an integer is positive, negative or zero.
+ * @n: the number to be checked.
+ * Return: 1 if positive, 0 if zero, -1 if negative, / if not a digit.
  */
 int print_sign(int n)
 {
 	if (n > 0)
 	{
-		_putchar('*');
+		_putchar('+');
 		return (1);
 	}
 	else if (n == 0)
@@ -19,9 +16,14 @@ int print_sign(int n)
 		_putchar('0');
 		return (0);
 	}
-	else
+	else if (n < 0)
 	{
 		_putchar('-');
 		return (-1);
+	}
+	else
+	{
+		_putchar('-');
+		return ('/');
 	}
 }
